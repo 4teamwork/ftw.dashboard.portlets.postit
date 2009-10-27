@@ -1,0 +1,30 @@
+<dl class="portlet postit portletPostIt"
+    i18n:domain="plone">
+
+    <a class="postIt_remove" style="display:none;"></a>
+
+    <dt class="portletHeader">
+	  	<span class="portletTopLeft"></span>
+        <span tal:content="view/title" />
+      	<span class="portletTopRight"></span>
+    </dt>
+
+    <tal:iterate tal:repeat="note view/notes">
+        <dd tal:define="oddrow repeat/note/odd;
+                        cssClass python: oddrow and 'odd' or 'even';
+                        cssClass string:${cssClass} portletItem postIt_note clearfix"
+                tal:attributes="class cssClass">
+            <span tal:content="note" />
+            <a class="close postIt_remove" title="entfernen"><img alt="Widget entfernen" tal:attributes="src string: ${here/portal_url}/++resource++ftw.dashboard.portlets.postit.resources/icon_remove_box.gif"/></a>
+        </dd>
+    </tal:iterate>
+
+    <dd class="portletItem postIt_addNote">
+        <form action="#" class="clearfix postIt_addNote_form">
+            <input type="text" name="note" class="text" />
+            <input class="allowMultiSubmit submit" type="submit" value="notieren" />
+        </form>
+    </dd>
+
+</dl>
+

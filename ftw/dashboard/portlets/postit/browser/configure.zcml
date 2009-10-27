@@ -1,0 +1,37 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="ftw.dashboard.portlets.postit">
+
+
+<!-- Resource directory -->
+<browser:resourceDirectory
+    name="ftw.dashboard.portlets.postit.resources"
+    directory="resources"
+    /> 
+
+<plone:portlet
+    name="ftw.dashboard.portlets.postit"
+    interface=".postit.IPostItPortlet"
+    assignment=".postit.Assignment"
+    renderer=".postit.Renderer"
+    addview=".postit.AddForm"
+    />
+
+<browser:page
+    for="*"
+    name="ftw.postit-addnote"
+    permission="zope.Public"
+    class=".postit.AddNote"
+    />
+
+<browser:page
+    for="*"
+    name="ftw.postit-removenote"
+    permission="zope.Public"
+    class=".postit.RemoveNote"
+    />
+
+</configure>

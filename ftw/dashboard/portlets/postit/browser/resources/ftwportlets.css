@@ -1,0 +1,48 @@
+/* post-it */
+#dashboard .postit .portletHeader,
+#dashboard .portletPostIt .portletHeader {
+	/*background-image:url(++resource++izug.theme.images/bg_postit.jpg);*/
+	background-color:#FFF7C2;
+}
+
+#dashboard .postit .portletHeader,
+#dashboard .portletPostIt .portletHeader {
+	border:1px solid #FFEB83;
+}
+
+#dashboard .postIt_addNote{
+	background-color:#FFF7C2;
+	border-top:1px solid #FFEB8;
+}
+
+#dashboard .postIt_addNote form{
+    background-color:#FFF7C2;
+}
+
+#dashboard .postit .portletItem,
+#dashboard .portletPostIt .portletItem {
+	border-left:1px solid #FFEB83;
+	border-right:1px solid #FFEB83;
+}
+
+#dashboard .portlet.postit,
+#dashboard .portlet.portletPostIt {
+	border-bottom:1px solid #FFEB83;
+}
+
+#dashboard .postit form,
+#dashboard .portletPostIt form {
+	clear:both;
+	padding:0;
+	margin:0;
+}
+
+.fold, .close , .edit {
+    cursor: pointer;
+    float:right;
+}
+
+.folded dd, .folded form, folded div{
+    display: none;
+    visibility: hidden;
+}
