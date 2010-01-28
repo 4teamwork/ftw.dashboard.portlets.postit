@@ -1,30 +1,24 @@
-from zope import schema
-from zope.component import getMultiAdapter, getUtility
-from zope.formlib import form
+from zope.component import getUtility
 from zope.interface import implements
 
-from plone.app.portlets.portlets import base
-from plone.memoize import ram
-from plone.memoize.compress import xhtml_compress
-from plone.memoize.instance import memoize
-from plone.portlets.interfaces import IPortletDataProvider
 from plone.app.portlets.cache import render_cachekey
-from plone.portlets.utils import hashPortletInfo
+from plone.app.portlets.portlets import base
+from plone.memoize.compress import xhtml_compress
+from plone.portlets.interfaces import IPortletDataProvider
 from plone.portlets.utils import unhashPortletInfo
 from plone.portlets.interfaces import IPortletManager
 from plone.portlets.constants import USER_CATEGORY
-from Products.Five import BrowserView
 
-from Acquisition import aq_inner
+from Products.Five import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.CMFPlone import PloneMessageFactory as _
+
 from ftw_formhelper import ftwNullAddForm
 
 
 class IPostItPortlet(IPortletDataProvider):
     """
     """
-
 
 
 class Assignment(base.Assignment):
@@ -62,7 +56,6 @@ class Renderer(base.Renderer):
         return self.data.title
 
 
-
 class AddForm(ftwNullAddForm):
 
     def create(self):
@@ -79,6 +72,7 @@ def get_column_and_portlet(context, portlet_info):
     portlet = column.get(portlet_info['name'])
     return column, portlet
 
+
 class AddNote(BrowserView):
 
     def __call__(self, *args, **kwargs):
@@ -93,7 +87,6 @@ class AddNote(BrowserView):
         portlet.notes = notes[:]
 
 
-
 class RemoveNote(BrowserView):
 
     def __call__(self, *args, **kwargs):
@@ -106,6 +99,3 @@ class RemoveNote(BrowserView):
         notes = portlet.notes[:]
         notes = notes[0:index] + notes[index+1:]
         portlet.notes = notes[:]
-
-
-
