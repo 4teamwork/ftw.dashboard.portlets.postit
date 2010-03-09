@@ -30,6 +30,12 @@ jq(function() {
                     note : text
             }
         });
+        
+        //escape the text
+        text = text.replace(/</g, '&lt;');
+        text = text.replace(/>/g, '&gt;');
+        text = text.replace(/"/g, '&quot;');
+        
         // add note to portlet
         var html = '<dd class="even portletItem postIt_note clearfix">';
         html += '<span>' + text + '</span>';

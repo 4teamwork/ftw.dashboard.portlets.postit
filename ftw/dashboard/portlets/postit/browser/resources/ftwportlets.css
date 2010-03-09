@@ -23,6 +23,7 @@
 #dashboard .portletPostIt .portletItem {
 	border-left:1px solid #FFEB83;
 	border-right:1px solid #FFEB83;
+	line-height: 2em;
 }
 
 #dashboard .portlet.postit,
