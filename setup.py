@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.0'
+version = open("ftw/dashboard/portlets/postit/version.txt").read().strip()
 
 setup(name='ftw.dashboard.portlets.postit',
       version=version,
