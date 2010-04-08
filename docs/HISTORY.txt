@@ -4,6 +4,8 @@ Changelog
 
 1.3
 ---
+* force hiding of portlet contents when collapsed
+  [fsprenger, 8.04.2010]
 
 
 1.2

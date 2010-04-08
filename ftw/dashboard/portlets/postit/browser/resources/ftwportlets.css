@@ -44,6 +44,5 @@
 }
 
 .folded dd, .folded form, folded div{
-    display: none;
-    visibility: hidden;
+    display: none !important;
 }
