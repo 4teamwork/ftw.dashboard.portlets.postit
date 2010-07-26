@@ -1,21 +1,15 @@
-from zope import schema
-from zope.component import getMultiAdapter, getUtility
-from zope.formlib import form
+from zope.component import getUtility
 from zope.interface import implements
 
 from plone.app.portlets.portlets import base
-from plone.memoize import ram
 from plone.memoize.compress import xhtml_compress
-from plone.memoize.instance import memoize
 from plone.portlets.interfaces import IPortletDataProvider
 from plone.app.portlets.cache import render_cachekey
-from plone.portlets.utils import hashPortletInfo
+from plone.app.portlets.utils import assignment_from_key
 from plone.portlets.utils import unhashPortletInfo
 from plone.portlets.interfaces import IPortletManager
 from plone.portlets.constants import USER_CATEGORY
 from Products.Five import BrowserView
-
-from Acquisition import aq_inner
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.CMFPlone import PloneMessageFactory as _
 from ftw_formhelper import ftwNullAddForm
@@ -77,6 +71,12 @@ def get_column_and_portlet(context, portlet_info):
 
     # get portlet
     portlet = column.get(portlet_info['name'])
+    if not portlet:
+        portlet = assignment_from_key(context, 
+                                      portlet_info['manager'],
+                                      portlet_info['category'],
+                                      portlet_info['key'],
+                                      portlet_info['name'])
     return column, portlet
 
 class AddNote(BrowserView):
