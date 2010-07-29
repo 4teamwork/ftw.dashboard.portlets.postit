@@ -4,6 +4,10 @@ Changelog
 
 1.3
 ---
+
+* fixed namespaces in setup.py
+  [phgross, 29.07.2010]
+
 * added a patch which allows postit to be placed in any portlet view anywhere on a site
   [phgross, 26.07.2010]
 
