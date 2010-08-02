@@ -1,27 +1,4 @@
 /* post-it */
-#dashboard .postit .portletHeader,
-#dashboard .portletPostIt .portletHeader {
-	/*background-image:url(++resource++izug.theme.images/bg_postit.jpg);*/
-	background-color:#FFF7C2;
-}
-
-#dashboard .postIt_addNote{
-	background-color:#FFF7C2;
-	border-top:1px solid #FFEB8;
-	margin-left:0px;
-}
-
-#dashboard .postIt_addNote form{
-    background-color:#FFF7C2;
-}
-
-#dashboard .postit form,
-#dashboard .portletPostIt form {
-	clear:both;
-	padding:0;
-	margin:0;
-}
-
 .fold, .close , .edit {
     cursor: pointer;
     float:right;
@@ -29,4 +6,51 @@
 
 .folded dd, .folded form, folded div{
     display: none !important;
+}
+
+#dashboard .portletPostIt {
+    border-bottom: 1px solid #DCC126;
+}
+#dashboard .portletPostIt .portletHeader {
+    background-image:url(++resource++ftw.dashboard.portlets.postit.resources/bg_postit.jpg);
+    background-position:left top;
+    background-repeat:repeat-x;
+    border-bottom: 1px solid #DCC126;
+	background-color: #FFF7C2;
+}
+#dashboard .postit .portletItem {
+    border-left: 1px solid #DCC126;
+    border-right: 1px solid #DCC126;
+
+}
+#dashboard .postit .portletItem.even {
+	background-color:#F7F7F7;
+}
+#dashboard .postit .portletItem.odd {
+	background-color:#EBEBEB;
+}
+#dashboard .postit .portletItem span {
+    font-family: courier, serif;
+    font-size: 1.1em;
+    line-height: 3em;
+    padding: 0 1em;
+}
+
+#dashboard .postIt_addNote{
+	border-top:1px solid #FFEB8;
+	margin-left:0px;
+}
+
+
+#dashboard .postit form,
+#dashboard .portletPostIt form {
+	clear:both;
+	padding:1em;
+	margin:0;
+}
+#dashboard .postit form input.text {
+    width: 10em;
+}
+#dashboard .postit form input.submit {
+    
 }
