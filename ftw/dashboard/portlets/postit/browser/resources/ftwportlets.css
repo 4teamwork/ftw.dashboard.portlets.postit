@@ -44,11 +44,11 @@
 #dashboard .postit form,
 #dashboard .portletPostIt form {
 	clear:both;
-	padding:1em;
+	padding:0em;
 	margin:0;
 }
 #dashboard .postit form input.text {
-    width: 10em;
+    width: 9em;
 }
 #dashboard .postit form input.submit {
     
