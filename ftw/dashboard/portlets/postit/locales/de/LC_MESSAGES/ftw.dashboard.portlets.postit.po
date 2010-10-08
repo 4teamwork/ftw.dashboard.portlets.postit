@@ -22,7 +22,7 @@ msgstr "Portlet bearbeitet"
 
 #: ftw.dashboard.portlets.postit/ftw/dashboard/portlets/postit/browser/postit.py:39
 msgid "Post-it"
-msgstr "Post-it"
+msgstr "Merkzettel"
 
 #: ftw.dashboard.portlets.postit/ftw/dashboard/portlets/postit/profiles/default/portlets.xml:14
 msgid "description_postit_portlet"

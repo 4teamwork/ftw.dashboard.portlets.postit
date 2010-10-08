@@ -11,7 +11,7 @@ from plone.portlets.interfaces import IPortletManager
 from plone.portlets.constants import USER_CATEGORY
 from Products.Five import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from Products.CMFPlone import PloneMessageFactory as _
+from ftw.dashboard.portlets.postit import _
 from ftw_formhelper import ftwNullAddForm
 
 
