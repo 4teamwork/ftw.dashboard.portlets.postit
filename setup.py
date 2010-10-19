@@ -24,7 +24,6 @@ setup(name='ftw.dashboard.portlets.postit',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'collective.js.jqueryui',
           # -*- Extra requirements: -*-
       ],
       entry_points="""
