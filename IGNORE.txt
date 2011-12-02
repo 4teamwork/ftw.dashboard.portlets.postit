@@ -1,6 +1,0 @@
-# created by: svn propset svn:ignore -F ./IGNORE.TXT .
-
-ftw.dashboard.portlets.postit.egg-info
-*.mo
-build
-dist
