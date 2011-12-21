@@ -5,6 +5,9 @@ Changelog
 1.4 (unreleased)
 ----------------
 
+- Translate portlet title in "plone" domain.
+  [jone]
+
 
 1.3 (2010-10-26)
 ----------------
@@ -27,7 +30,7 @@ Changelog
 
 1.1
 ---
-- added escaping tags ect. 
+- added escaping tags ect.
 
 
 1.0
