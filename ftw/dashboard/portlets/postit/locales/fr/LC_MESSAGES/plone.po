@@ -13,5 +13,6 @@ msgstr ""
 "Domain: DOMAIN\n"
 
 msgid "Post-it portlet"
-msgstr "Mémo Portlet"
+msgstr "Outil  Portlet"
+
 
