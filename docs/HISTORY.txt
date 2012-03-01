@@ -5,6 +5,9 @@ Changelog
 1.4 (unreleased)
 ----------------
 
+- Added plone default class to button in postit portlet.
+  [Julian Infanger]
+
 - Added some French translations
   [ttschanz]
 
