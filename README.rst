@@ -1,18 +1,18 @@
-
+Overview
 ========
 
 The postit portlet let you add small notes on your dashbord.
 
 
 Install
-======
+=======
 
 - Add ``ftw.dashboard.portlets.postit`` to your buildout configuration
 
 :: 
   [instance]
   eggs = 
-    ftw.dashboard.portlets.postit
+  ftw.dashboard.portlets.postit
     
 - Run buildout
 
