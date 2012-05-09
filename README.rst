@@ -26,7 +26,10 @@ Links
 - Issue tracker: https://github.com/4teamwork/ftw.dashboard.portlets.postit/issues
 - Package on pypi: http://pypi.python.org/pypi/ftw.dashboard.portlets.postit
 
-Maintainer
-==========
 
-This package is produced and maintained by `4teamwork GmbH <http://www.4teamwork.ch/>`_.
+Copyright
+=========
+
+This package is copyright by `4teamwork <http://www.4teamwork.ch/>`_.
+
+``ftw.dashboard.portlets.postit`` is licensed under GNU General Public License, version 2.
