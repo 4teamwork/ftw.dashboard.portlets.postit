@@ -1,9 +1,8 @@
 <dl class="portlet postit portletPostIt"
     i18n:domain="plone">
 
-    <a class="postIt_remove" style="display:none;"></a>
-
     <dt class="portletHeader">
+      <a class="postIt_remove" style="display:none;"></a>
 	  	<span class="portletTopLeft"></span>
         <span tal:content="view/title" />
       	<span class="portletTopRight"></span>
