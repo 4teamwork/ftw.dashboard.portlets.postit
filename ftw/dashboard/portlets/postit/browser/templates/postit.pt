@@ -1,12 +1,10 @@
 <dl class="portlet postit portletPostIt"
     i18n:domain="plone">
 
-    <a class="postIt_remove" style="display:none;"></a>
-
     <dt class="portletHeader">
-	  	<span class="portletTopLeft"></span>
+        <span class="portletTopLeft"></span>
         <span tal:content="view/title" />
-      	<span class="portletTopRight"></span>
+        <span class="portletTopRight"></span>
     </dt>
 
     <tal:iterate tal:repeat="note view/notes">
