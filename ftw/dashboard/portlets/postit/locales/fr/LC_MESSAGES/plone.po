@@ -15,4 +15,5 @@ msgstr ""
 msgid "Post-it portlet"
 msgstr "Outil  Mémo"
 
-
+msgid "notieren"
+msgstr "Enregistrer"

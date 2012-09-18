@@ -20,7 +20,7 @@
     <dd class="portletItem postIt_addNote">
         <form action="#" class="clearfix postIt_addNote_form">
             <input type="text" name="note" class="text" />
-            <input class="allowMultiSubmit submit standalone" type="submit" value="notieren" />
+            <input class="allowMultiSubmit submit standalone" type="submit" value="notieren" i18n:attributes="value" />
         </form>
     </dd>
 

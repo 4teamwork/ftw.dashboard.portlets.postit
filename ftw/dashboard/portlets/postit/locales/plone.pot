@@ -19,3 +19,6 @@ msgstr ""
 
 msgid "Post-it portlet"
 msgstr ""
+
+msgid "notieren"
+msgstr ""
