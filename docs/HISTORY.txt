@@ -5,6 +5,9 @@ Changelog
 1.3.3 (unreleased)
 ------------------
 
+- Updated French translations.
+  [tschanzt]
+
 - Removed unused link.
   [Julian Infanger]
 
