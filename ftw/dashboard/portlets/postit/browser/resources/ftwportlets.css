@@ -49,7 +49,6 @@
 }
 #dashboard .postit form input.text {
     width: 60%;
-    margin-top: 0.2em;
 }
 #dashboard .postit form.postIt_addNote_form input.submit {
     width: 35%;
