@@ -21,6 +21,7 @@
         <form action="#" class="clearfix postIt_addNote_form">
             <input type="text" name="note" class="text" />
             <input class="allowMultiSubmit submit standalone" type="submit" value="notieren" i18n:attributes="value" />
+            <div class="visualClear"><!-- --></div>
         </form>
     </dd>
 
