@@ -48,8 +48,12 @@
 	margin:0;
 }
 #dashboard .postit form input.text {
-    width: 9em;
+    width: 60%;
+}
+#dashboard .postit form.postIt_addNote_form input.submit {
+    width: 35%;
+    float: right;
 }
 #dashboard .postit form input.submit {
-    
+
 }

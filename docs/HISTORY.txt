@@ -5,7 +5,8 @@ Changelog
 1.3.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Updated css for add postit form.
+  [Julian Infanger]
 
 
 1.3.3 (2012-09-25)
