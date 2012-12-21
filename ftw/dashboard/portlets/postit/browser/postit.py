@@ -13,6 +13,8 @@ from Products.Five import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from ftw.dashboard.portlets.postit import _
 from ftw_formhelper import ftwNullAddForm
+from Products.CMFCore.utils import getToolByName
+from zExceptions import Unauthorized
 
 
 class IPostItPortlet(IPortletDataProvider):
@@ -72,7 +74,7 @@ def get_column_and_portlet(context, portlet_info):
     # get portlet
     portlet = column.get(portlet_info['name'])
     if not portlet:
-        portlet = assignment_from_key(context, 
+        portlet = assignment_from_key(context,
                                       portlet_info['manager'],
                                       portlet_info['category'],
                                       portlet_info['key'],
@@ -83,9 +85,15 @@ class AddNote(BrowserView):
 
     def __call__(self, *args, **kwargs):
         value = str(self.request.get('note'))
-        hash = self.request.get('hash')
+        hash_ = self.request.get('hash')
         # get postit portlet
-        portlet_info = unhashPortletInfo(hash)
+        portlet_info = unhashPortletInfo(hash_)
+        userid = portlet_info['key']
+        mtool = getToolByName(self.context, 'portal_membership')
+        member = mtool.getAuthenticatedMember()
+        if userid != member.getId():
+            raise Unauthorized
+
         column, portlet = get_column_and_portlet(self.context, portlet_info)
         # store data
         notes = portlet.notes[:]
