@@ -2,6 +2,13 @@ Changelog
 =========
 
 
+1.3.2.1 (unreleased)
+--------------------
+
+- Fix security error, it was possible to add postit comment on a
+  foreign dashboard if the userid an portlet id was known. (Security audit)
+
+
 1.3.2 (2012-03-12)
 ------------------
 
