@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.3.2.1 (unreleased)
+1.3.2.1 (2012-12-27)
 --------------------
 
 - Fix security error, it was possible to add postit comment on a
