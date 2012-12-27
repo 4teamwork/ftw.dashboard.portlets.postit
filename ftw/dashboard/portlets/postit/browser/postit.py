@@ -105,10 +105,17 @@ class AddNote(BrowserView):
 class RemoveNote(BrowserView):
 
     def __call__(self, *args, **kwargs):
-        hash = self.request.get('hash')
+        hash_ = self.request.get('hash')
         index = int(self.request.get('index'))
         # get postit portlet
-        portlet_info = unhashPortletInfo(hash)
+        portlet_info = unhashPortletInfo(hash_)
+
+        userid = portlet_info['key']
+        mtool = getToolByName(self.context, 'portal_membership')
+        member = mtool.getAuthenticatedMember()
+        if userid != member.getId():
+            raise Unauthorized
+
         column, portlet = get_column_and_portlet(self.context, portlet_info)
         # remove note
         notes = portlet.notes[:]
