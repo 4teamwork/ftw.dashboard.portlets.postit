@@ -5,6 +5,9 @@ Changelog
 1.3.4 (unreleased)
 ------------------
 
+- Replace jq by $.
+  [mathias.leimgruber]
+
 - Fix security error, it was possible to add postit comment on a
   foreign dashboard if the userid an portlet id was known. (Security audit)
 
