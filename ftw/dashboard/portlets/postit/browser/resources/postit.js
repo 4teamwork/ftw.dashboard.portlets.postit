@@ -1,5 +1,4 @@
-
-$(function() {
+jQuery(function($) {
 
     // REFRESH ODD / EVEN
     var refreshOddEven = function(jqElm){
