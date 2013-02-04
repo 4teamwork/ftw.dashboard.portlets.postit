@@ -15,7 +15,7 @@ $(function() {
                 odd = true;
             }
         });
-    }
+    };
 
     // CREATE NOTE
     $('form.postIt_addNote_form').submit(function() {
@@ -52,7 +52,7 @@ $(function() {
 
 
     // DELEETE NOTE
-    $('.postIt_remove').live('click', function() {
+    $('.postIt_remove').live('click', function(){
         var notes = $(this).parents('.portletPostIt:first').find('.portletItem');
         var index = notes.index($(this).parents('.portletItem:first'));
         var hash = $(this).parents('.portletPostIt:first').parents('div:first')[0].id.substr('portletwrapper-'.length);
