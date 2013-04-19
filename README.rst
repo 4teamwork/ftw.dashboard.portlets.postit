@@ -32,3 +32,7 @@ Copyright
 This package is copyright by `4teamwork <http://www.4teamwork.ch/>`_.
 
 ``ftw.dashboard.portlets.postit`` is licensed under GNU General Public License, version 2.
+
+.. image:: https://cruel-carlota.pagodabox.com/f16216c8709f79185aebdf81d80989d3
+   :alt: githalytics.com
+   :target: http://githalytics.com/4teamwork/ftw.dashboard.portlets.postit
