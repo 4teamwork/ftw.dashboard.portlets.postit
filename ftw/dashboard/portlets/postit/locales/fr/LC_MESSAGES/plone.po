@@ -13,7 +13,9 @@ msgstr ""
 "Domain: DOMAIN\n"
 
 msgid "Post-it portlet"
-msgstr "Outil  Mémo"
+msgstr "Portlet  Mémo"
 
 msgid "notieren"
 msgstr "Enregistrer"
+
+
