@@ -1,5 +1,7 @@
 jQuery(function($) {
 
+    var authenticator_token = $('.portletPostIt').data('authenticator-token');
+
     // REFRESH ODD / EVEN
     var refreshOddEven = function(jqElm){
         var odd = false;
@@ -24,6 +26,9 @@ jQuery(function($) {
         $.ajax({
             type :      'POST',
             url :       './@@ftw.postit-addnote',
+            beforeSend: function (request){
+              request.setRequestHeader("X-CSRF-TOKEN", authenticator_token);
+            },
             data :      {
                     hash : hash,
                     note : text
@@ -58,6 +63,9 @@ jQuery(function($) {
         $.ajax({
             type :          'POST',
             url :           './@@ftw.postit-removenote',
+            beforeSend: function (request){
+              request.setRequestHeader("X-CSRF-TOKEN", authenticator_token);
+            },
             data :          {
                     hash : hash,
                     index : index

@@ -1,20 +1,28 @@
+from ftw.dashboard.portlets.postit import _
+from ftw_formhelper import ftwNullAddForm
+from plone.app.portlets.cache import render_cachekey
+from plone.app.portlets.portlets import base
+from plone.app.portlets.utils import assignment_from_key
+from plone.memoize.compress import xhtml_compress
+from plone.portlets.constants import USER_CATEGORY
+from plone.portlets.interfaces import IPortletDataProvider
+from plone.portlets.interfaces import IPortletManager
+from plone.portlets.utils import unhashPortletInfo
+from Products.CMFCore.utils import getToolByName
+from Products.Five import BrowserView
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from zExceptions import Unauthorized
 from zope.component import getUtility
 from zope.interface import implements
 
-from plone.app.portlets.portlets import base
-from plone.memoize.compress import xhtml_compress
-from plone.portlets.interfaces import IPortletDataProvider
-from plone.app.portlets.cache import render_cachekey
-from plone.app.portlets.utils import assignment_from_key
-from plone.portlets.utils import unhashPortletInfo
-from plone.portlets.interfaces import IPortletManager
-from plone.portlets.constants import USER_CATEGORY
-from Products.Five import BrowserView
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from ftw.dashboard.portlets.postit import _
-from ftw_formhelper import ftwNullAddForm
-from Products.CMFCore.utils import getToolByName
-from zExceptions import Unauthorized
+
+# Try to get the plone.protect's createToken method, because it's only
+# available since version 2.0.2, otherwise we just use a mocked method.
+try:
+    from plone.protect import createToken
+except ImportError:
+    def createToken():
+        return ''
 
 
 class IPostItPortlet(IPortletDataProvider):
@@ -57,6 +65,8 @@ class Renderer(base.Renderer):
     def title(self):
         return self.data.title
 
+    def authenticator_token(self):
+        return createToken()
 
 
 class AddForm(ftwNullAddForm):
@@ -114,6 +124,3 @@ class RemoveNote(BrowserView):
         notes = portlet.notes[:]
         notes = notes[0:index] + notes[index+1:]
         portlet.notes = notes[:]
-
-
-
