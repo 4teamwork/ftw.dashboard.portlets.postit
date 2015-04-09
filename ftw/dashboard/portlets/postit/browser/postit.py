@@ -30,7 +30,6 @@ class IPostItPortlet(IPortletDataProvider):
     """
 
 
-
 class Assignment(base.Assignment):
     implements(IPostItPortlet)
 
@@ -57,7 +56,7 @@ class Renderer(base.Renderer):
     def notes(self):
         return self.data.notes
 
-    #XXX: @ram.cache(_render_cachekey)
+    # XXX: @ram.cache(_render_cachekey)
     def render(self):
         return xhtml_compress(self._template())
 
@@ -91,6 +90,7 @@ def get_column_and_portlet(context, portlet_info):
                                       portlet_info['name'])
     return column, portlet
 
+
 class AddNote(BrowserView):
 
     def __call__(self, *args, **kwargs):
@@ -111,7 +111,6 @@ class AddNote(BrowserView):
         portlet.notes = notes[:]
 
 
-
 class RemoveNote(BrowserView):
 
     def __call__(self, *args, **kwargs):
@@ -122,5 +121,5 @@ class RemoveNote(BrowserView):
         column, portlet = get_column_and_portlet(self.context, portlet_info)
         # remove note
         notes = portlet.notes[:]
-        notes = notes[0:index] + notes[index+1:]
+        notes = notes[0:index] + notes[index + 1:]
         portlet.notes = notes[:]
