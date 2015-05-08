@@ -21,9 +21,9 @@ Install
 Links
 =====
 
-- Package repository: https://github.com/4teamwork/ftw.dashboard.portlets.postit
-- Issue tracker: https://github.com/4teamwork/ftw.dashboard.portlets.postit/issues
-- Package on pypi: http://pypi.python.org/pypi/ftw.dashboard.portlets.postit
+- Github: https://github.com/4teamwork/ftw.dashboard.portlets.postit
+- Issues: https://github.com/4teamwork/ftw.dashboard.portlets.postit/issues
+- Pypi: http://pypi.python.org/pypi/ftw.dashboard.portlets.postit
 
 
 Copyright
